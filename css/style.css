@@ -1,0 +1,227 @@
+/*Обнуление____________________________________________________________________________________________________*/
+*,
+*::before *::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+}
+
+body: {
+	font-size: 12px;
+	color: #fff;
+	font-family: 'Rubik', sans-serif;
+}
+
+
+.wrapper {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+/*____________________________________header________________________________________________________________*/
+.header {}
+
+.header__strip {
+	display: flex;
+	align-items: center;
+	/*левый верх, правый верх, правый низ, левый низ*/
+	border-radius: 0px 0px 15px 15px;
+	background: #3c1053;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2a0b3a, #3c1053, #50156e, #3c1053, #2a0b3a);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2a0b3a, #3c1053, #50156e, #3c1053, #2a0b3a);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/*Отступы безопасности~~~~~~~~~~~~~~*/
+	padding: 0px 20px;
+	justify-content: space-between;
+	/*Центрирование~~~~~~~~~~~~~~~~~~~~~*/
+	margin: 0px auto;
+	z-index: 2;
+}
+
+/*------------------------------Селектор------------------------------------------------------------------*/
+
+[class*="__container"] {
+	align-items: center;
+	/*Центрирование*/
+	margin: 0px auto;
+	width: 900px;
+	/*Отступы безопасности*/
+	padding: 0px 20px;
+	padding-top: 20px;
+	background: #072929;
+}
+
+[class*="__block"] {
+	display: flex;
+	flex: 0 1 auto;
+}
+
+/* -------------------------------Картинки-----------------------------------------------------------------*/
+.header-logo {
+	width: 100px;
+	height: 100px;
+}
+/*Картинка с обтеканием*/
+.left {
+  float: left;
+  margin: 0 1em 1em 0;
+ }
+/*---------------------------------Меню--------------------------------------------------------------------*/
+.header-menu {}
+.menu {}
+.menu-body {
+	display: flex;
+	min-height: 100%;
+}
+.menu-list {
+	display: inline-flex;
+}
+.menu-item {
+	padding-right: 70px;
+}
+.menu-item:last-child {
+	padding-right: 40px;
+}
+
+.menu-link {
+	-webkit-text-stroke: 1px #fff;
+	color: black;
+	font-family: 'Rubik', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 28px;
+}
+.menu-link:hover {
+	color: #fff;
+}
+
+/*----------------------------------Кнопка-----------------------------------------------------------------*/
+.header__button {
+	display: flex;
+}
+.button {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #e2e3e4;
+	display: inline-block;
+	background-color: #0b158e;
+	color: #121212;
+	border-radius: 8px;
+	font-family: 'Rubik', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 20px;
+	padding: 15px 30px;
+}
+.button:hover {
+	background-color: #0e2caf;
+	color: #fcfdfe;
+}
+
+/*___________________________________main_________________________________________________________________*/
+.main {
+	/*flex: 1 1 auto - позволяет main увеличиватся до талова*/
+	flex: 1 1 auto;
+}
+
+/*________________________________Футер____________________________________________________________________*/
+.footer {
+	padding: 1px 0px;
+	text-align: center;
+	/*левый верх, правый верх, правый низ, левый низ*/
+	border-radius: 15px 15px 0px 0px;
+	background: #3c1053;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2a0b3a, #3c1053, #50156e, #3c1053, #2a0b3a);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2a0b3a, #3c1053, #50156e, #3c1053, #2a0b3a);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.footer__container-f {
+	align-items: center;
+	/*Центрирование*/
+	margin: 0px auto;
+	width: 800px;
+	/*Отступы безопасности*/
+	padding: 0px 20px;
+	background: none;
+}
+
+ .footer__link {
+	color: yellow;
+	font-family: 'Rubik', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+}
+.footer__link:hover {
+	color: green;
+}
+/*___________________________________БЭМ_Блоки______________________________________________________________*/
+ol li {
+	list-style: disc;
+	list-style-type: disc;
+}
+.case {
+	justify-content: center;
+	border: groove 2px white;
+	padding: 0px 5px;
+}
+.case-m {
+	flex: 0 1 40%;
+	border: groove 2px white;
+	padding: 0px 5px;
+}
+.block__title {
+	color: white;
+	font-family: 'Rubik', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+}
+.block__text {
+	color: white;
+	font-family: 'Rubik', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	text-decoration: inherit;
+}
+/*________________________________Адаптив___________________________________________________________________*/
+
+/**/
+.panel {
+	border: solid 4px green;
+}
